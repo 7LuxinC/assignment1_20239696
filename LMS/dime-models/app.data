@@ -1,0 +1,126 @@
+Data _tH3fEMwMEeWZVvvwxpYu8A {
+  modelName "Data"
+  ConcreteType _dh6BYMwNEeWZVvvwxpYu8A at 100,33 size 111,73 {
+  	name "ConcreteUser"
+  	UserAttribute _fPY24MwNEeWZVvvwxpYu8A at 5,32 size 101,18 {
+  		oppositeAttribute _fOkXgMwNEeWZVvvwxpYu8A
+  		dataType _UdYs4MwNEeWZVvvwxpYu8A
+  		name "baseUser"
+  		isList false
+  	}
+  	
+  	BidirectionalAttribute _zTDRgU1vEeyjn6oaCYeN5A at 5,50 size 101,18 {
+  		oppositeAttribute _zR1JgE1vEeyjn6oaCYeN5A
+  		dataType _YH4gsU1vEeyjn6oaCYeN5A
+  		name "lMS"
+  		isList false
+  	}
+  }
+  
+  UserType _UdYs4MwNEeWZVvvwxpYu8A at 84,191 size 143,145 {
+  	name "BaseUser"
+  	UserAttribute _fOkXgMwNEeWZVvvwxpYu8A at 5,32 size 133,18 {
+  		oppositeAttribute _fPY24MwNEeWZVvvwxpYu8A
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "concreteUser"
+  		isList true
+  	}
+  	
+  	PrimitiveAttribute _YIIgUMwNEeWZVvvwxpYu8A at 5,104 size 133,18 {
+  		dataType Text
+  		name "section"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _3QnzMM46EeWKGIrSDzlNog at 5,68 size 133,18 {
+  		dataType File
+  		name "image"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _VE6ToM5BEeWKGIrSDzlNog at 5,50 size 133,18 {
+  		dataType Text
+  		name "firstName"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _WYcYEM5BEeWKGIrSDzlNog at 5,86 size 133,18 {
+  		dataType Text
+  		name "lastName"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _1aiCkG_QEeaqHezD6-M0AA at 5,122 size 133,18 {
+  		dataType Text
+  		name "username"
+  		isList false
+  	}
+  	-UserAssociation-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (4,-8) decorate "Text" at (12,-7) {
+  		id _fOZ_cMwNEeWZVvvwxpYu8A
+  		targetAttr _fOkXgMwNEeWZVvvwxpYu8A
+  		isHidden false
+  		sourceAttr _fPY24MwNEeWZVvvwxpYu8A
+  	}
+  }
+  
+  ConcreteType _YH4gsU1vEeyjn6oaCYeN5A at 401,33 size 140,73 {
+  	name "LMS"
+  	ComplexAttribute _yPKyoE1vEeyjn6oaCYeN5A at 5,50 size 130,18 {
+  		dataType _d7I4wU1vEeyjn6oaCYeN5A
+  		name "librarian"
+  		isList false
+  	}
+  	
+  	BidirectionalAttribute _zR1JgE1vEeyjn6oaCYeN5A at 5,32 size 130,18 {
+  		oppositeAttribute _zTDRgU1vEeyjn6oaCYeN5A
+  		dataType _dh6BYMwNEeWZVvvwxpYu8A
+  		name "concreteUser"
+  		isList false
+  	}
+  	-Association-> _d7I4wU1vEeyjn6oaCYeN5A  decorate "Text" at (9,6) decorate "" at (0,0) {
+  		id _yOTP8E1vEeyjn6oaCYeN5A
+  		isHidden false
+  		sourceAttr _yPKyoE1vEeyjn6oaCYeN5A
+  	}
+  	
+  	-BidirectionalAssociation-> _dh6BYMwNEeWZVvvwxpYu8A  decorate "Text" at (-53,0) decorate "Text" at (0,0) {
+  		id _zP6d8E1vEeyjn6oaCYeN5A
+  		targetAttr _zR1JgE1vEeyjn6oaCYeN5A
+  		isHidden false
+  		sourceAttr _zTDRgU1vEeyjn6oaCYeN5A
+  	}
+  }
+  
+  ConcreteType _d7I4wU1vEeyjn6oaCYeN5A at 401,200 size 140,127 {
+  	name "Librarian"
+  	PrimitiveAttribute _hd_7gU1vEeyjn6oaCYeN5A at 5,68 size 130,18 {
+  		dataType Text
+  		name "lastname"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _hz5TAU1vEeyjn6oaCYeN5A at 5,32 size 130,18 {
+  		dataType Text
+  		name "firstname"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _iFnVIE1vEeyjn6oaCYeN5A at 5,50 size 130,18 {
+  		dataType Integer
+  		name "id"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _i1UTwU1vEeyjn6oaCYeN5A at 5,86 size 130,18 {
+  		dataType Text
+  		name "section"
+  		isList false
+  	}
+  	
+  	PrimitiveAttribute _jOWe0U1vEeyjn6oaCYeN5A at 5,104 size 130,18 {
+  		dataType Text
+  		name "position"
+  		isList false
+  	}
+  }
+}

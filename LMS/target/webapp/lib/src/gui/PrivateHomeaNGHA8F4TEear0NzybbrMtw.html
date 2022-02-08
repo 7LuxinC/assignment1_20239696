@@ -1,0 +1,69 @@
+<login-form 
+	*ngIf="currentUser==null && showLogin == true"
+	(signedin)="loadCurrentUser()"
+	[modal]="modalDialog"
+	></login-form>
+<template [ngIf]="currentUser!=null && showLogin == false">
+<div class="row">
+	<div class="col-sm-12">
+<div 
+  class="jumbotron">
+<div 
+ class="row">
+<div
+
+class="col-md-12 text-center"
+>
+<h1
+*ngIf="				currentUser!=null && 
+								currentUser?.baseUser!=null
+" 
+aria-live="polite" aria-atomic="true" 
+
+[ngStyle]="{ 'margin-top':'45px' }"
+> 
+<span aria-live="polite" aria-atomic="true" class="text-left">
+Welcome, {{currentUser?.baseUser?.firstName}} {{currentUser?.baseUser?.lastName}}.
+</span>
+</h1>
+<h4
+
+[ngStyle]="{ 'margin-top':'15px' }"
+> 
+<span aria-live="polite" aria-atomic="true" class="text-left">
+This is the private area.
+</span>
+</h4>
+<!-- beginn button LibrarianMS -->
+<button 
+	data-cinco-id="_ZF1EwU1xEeyjn6oaCYeN5A"
+	tabindex="0" aria-label="LibrarianMS"
+	[disabled]="isBusy()"
+type="button"
+(click)="actionlibrarianmseventaZF1EwU1xEeyjn6oaCYeN5AEventTrigger()
+"
+class="btn btn-info">
+<span aria-hidden="true" aria-label="icon book" class="glyphicon glyphicon-book" style="right:2px"></span>
+ LibrarianMS
+ <span aria-hidden="true" aria-label="icon search" class="glyphicon glyphicon-search" style="left:2px"></span>
+</button>
+<!-- end button LibrarianMS -->
+<!-- beginn button Logout -->
+<button 
+ [ngStyle]="{ 'margin-top':'30px' }"
+	data-cinco-id="_2eAhoF-REeakMeYoloYxpg"
+	tabindex="0" aria-label="Logout"
+	[disabled]="isBusy()"
+type="button"
+(click)="window.location.href=''+getLogoutURL.toString()+''"
+class="btn btn-warning">
+ Logout
+ <span aria-hidden="true" aria-label="icon log-out" class="glyphicon glyphicon-log-out" style="left:2px"></span>
+</button>
+<!-- end button Logout -->
+</div>
+</div>
+</div>
+	</div>
+</div>
+</template>

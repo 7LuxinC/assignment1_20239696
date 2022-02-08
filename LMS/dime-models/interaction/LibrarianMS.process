@@ -1,0 +1,63 @@
+Process _FtHjoU1xEeyjn6oaCYeN5A {
+  modelName "LibrarianMS"
+  description "LibrarianMS"
+  dataFlowView true
+  processType Basic
+  isStateful false
+  DataContext _FtzgIU1xEeyjn6oaCYeN5A at 20,-10 size 210,575 {
+  	dfViewWorkaround true
+  }
+  
+  StartSIB _FuL6oU1xEeyjn6oaCYeN5A at 330,-10 size 100,65 {
+  	-ControlFlow-> _LMIxEU1xEeyjn6oaCYeN5A  decorate "" at (0,0) {
+  		id _R9UJ8U1xEeyjn6oaCYeN5A
+  		concurrent true
+  	}
+  }
+  
+  EndSIB _FukVIU1xEeyjn6oaCYeN5A at 330,500 size 100,65 {
+  	branchName "success"
+  }
+  
+  GUISIB _LMIxEU1xEeyjn6oaCYeN5A at 600,-10 size 120,65 {
+  	cacheGUI false
+  	majorPage true
+  	libraryComponentUID "_LmrS0Ej8EeaK4_MRcoLfnw"
+  	name "PublicHome"
+  	label "PublicHome"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _LOI8MU1xEeyjn6oaCYeN5A   {
+  		id _LOVwgU1xEeyjn6oaCYeN5A
+  		concurrent true
+  	}
+  }
+  
+  Branch _LOI8MU1xEeyjn6oaCYeN5A at 600,130 size 120,25 {
+  	name "Login"
+  	-ControlFlow-> _-BVuQE1xEeyjn6oaCYeN5A  decorate "" at (0,0) {
+  		id _ARvqoU1yEeyjn6oaCYeN5A
+  		concurrent true
+  	}
+  }
+  
+  GUISIB _-BVuQE1xEeyjn6oaCYeN5A at 600,290 size 120,60 {
+  	cacheGUI false
+  	majorPage true
+  	libraryComponentUID "_NGHA8F4TEear0NzybbrMtw"
+  	name "PrivateHome"
+  	label "PrivateHome"
+  	ignoredBranch [  ]
+  	-BranchConnector-> _-BpQQU1xEeyjn6oaCYeN5A   {
+  		id _-BuIwU1xEeyjn6oaCYeN5A
+  		concurrent true
+  	}
+  }
+  
+  Branch _-BpQQU1xEeyjn6oaCYeN5A at 600,520 size 120,25 {
+  	name "LibrarianMS"
+  	-ControlFlow-> _FukVIU1xEeyjn6oaCYeN5A  decorate "" at (0,0) {
+  		id _CIxdsU1yEeyjn6oaCYeN5A
+  		concurrent true
+  	}
+  }
+}
